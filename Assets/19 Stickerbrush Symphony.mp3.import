@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/19 Stickerbrush Symphony.mp3-1a03a138adbb83aa098537ad6991e43d.mp3str"
+
+[deps]
+
+source_file="res://Assets/19 Stickerbrush Symphony.mp3"
+dest_files=[ "res://.import/19 Stickerbrush Symphony.mp3-1a03a138adbb83aa098537ad6991e43d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
