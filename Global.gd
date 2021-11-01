@@ -26,4 +26,8 @@ func _unhandled_input(event):
 
 func change_score(s):
 	score += s
+	if camera == null:
+		camera = get_node_or_null("/root/Game/Camera")
+	if camera != null:
+		camera.add_trauma(s/20.0)
 	emit_signal("changed")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Grid/grid.gd" type="Script" id=1]
 [ext_resource path="res://Pieces/Piece Background.tscn" type="PackedScene" id=2]
@@ -10,10 +10,30 @@
 [ext_resource path="res://Assets/1.wav" type="AudioStream" id=8]
 [ext_resource path="res://Assets/3.wav" type="AudioStream" id=9]
 [ext_resource path="res://UI/Music.gd" type="Script" id=10]
+[ext_resource path="res://Camera.gd" type="Script" id=11]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform vec2 direction = vec2(1.0,0.0);
+uniform float speed_scale = 0.05;
+
+void fragment(){
+
+     vec2 move = direction * TIME * speed_scale;
+
+     COLOR = texture(TEXTURE, UV + move);   
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/direction = Vector2( 1, 0 )
+shader_param/speed_scale = 0.05
 
 [node name="Game" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 2 )
 texture = ExtResource( 6 )
 centered = false
 
@@ -72,5 +92,10 @@ stream = ExtResource( 7 )
 
 [node name="3" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 9 )
+
+[node name="Camera" type="Camera2D" parent="."]
+anchor_mode = 0
+current = true
+script = ExtResource( 11 )
 
 [connection signal="finished" from="Music" to="Music" method="_on_Music_finished"]

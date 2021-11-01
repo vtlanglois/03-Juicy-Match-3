@@ -53,3 +53,5 @@ visible = false
 modulate = Color( 1, 1, 0, 1 )
 material = SubResource( 6 )
 scale = Vector2( 0.5, 0.5 )
+
+[node name="Tween" type="Tween" parent="."]
