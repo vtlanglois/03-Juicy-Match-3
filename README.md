@@ -1,3 +1,7 @@
+# Note
+
+So I did forget to push up my commits to this repo. However, all the code, assets, and even the project.godot file just, disappeared. I recreated as much of the project as I could, removing one juicy feature due to time constraints. I do not know why that occured, but I'll keep a closer eye on my projects just in case.
+
 # Project Name
 For MSCH-C220 on 10/7/2021
 
@@ -10,7 +14,6 @@ Juicy Match-3
 - pieces change color
 - Screen shake
 - Particles when selected
-- Explosion when matched
 - Fall tween
 - Move tween
 - Spin tween
