@@ -21,6 +21,10 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Global.gd"
+<<<<<<< Updated upstream
+=======
+Music="*res://Music.tscn"
+>>>>>>> Stashed changes
 
 [display]
 
